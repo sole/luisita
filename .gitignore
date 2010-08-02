@@ -1,10 +1,4 @@
-# Ignore useless stuff
-.DS_Store
-Thumbs.db
-luisita
-src/nbproject
-src/*.o
-src/lua/liblua.a
-src/lua/src/*.o
+*.o
+src/lua/src/liblua.a
 src/lua/src/lua
 src/lua/src/luac
