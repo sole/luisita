@@ -154,7 +154,7 @@ int main(int argc, char *argv[])
 
     if(scriptName.length() == 0)
     {
-            fprintf(stderr, "No script name specified, nothing to do?\n");
+            fprintf(stderr, "Error: No script name specified, nothing to do? \n(Hint: use -? option to get help)\n");
             exit(1);
     }
 
