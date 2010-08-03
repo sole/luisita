@@ -1,4 +1,12 @@
+# ignore build products
 *.o
 src/lua/src/liblua.a
 src/lua/src/lua
 src/lua/src/luac
+luisita
+src/nbproject
+
+# Ignore useless stuff
+.DS_Store
+Thumbs.db
+
