@@ -15,7 +15,7 @@ linux32: $(OBJECTS)
 linux64: $(OBJECTS)
 	cp ./bass/libbass_x86_64.so ../libbass.so
 	cp ./bass/libbass_x86_64.so ./bass/libbass.so
-	g++ -O3 -o ../$(TARGET) $(OBJECTS) -m64 ./lua/src/liblua.a -L./bass -lbass -pthread `sdl-config --cflags --libs` -lGL -lGLU -lGLEW -Wl,-R.
+	g++ -O3 -o ../$(TARGET) $(OBJECTS) -m64 ./lua/src/liblua.a  ./SOIL/libSOIL-linux_x86_64.a -L./bass -lbass -pthread `sdl-config --cflags --libs` -lGL -lGLU -lGLEW -Wl,-R.
 	rm ./bass/libbass.so
  
 clean:

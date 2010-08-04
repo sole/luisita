@@ -13,7 +13,7 @@ Released yyyymmdd
  
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  
-Copyright 2009 Soledad Penades http://soledadpenades.com
+Copyright 2009-2010 Soledad Penades http://soledadpenades.com
 
 This file is part of luisita
 
@@ -209,6 +209,9 @@ int main(int argc, char *argv[])
         // TODO: tell luisita she can't use shaders
     }
 
+	// Notify of window width and height
+	luisita_setWindowDimensions(width, height);
+	
     // Main loop
     luisita_run();
  
