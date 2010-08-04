@@ -4,6 +4,7 @@ src/lua/src/liblua.a
 src/lua/src/lua
 src/lua/src/luac
 luisita
+libbass.so
 src/nbproject
 
 # Ignore useless stuff
