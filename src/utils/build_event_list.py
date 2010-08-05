@@ -144,7 +144,7 @@ def main(argv=None):
 	output += "events_list = {}\n"
 	
 	for event in events:
-		output += "table.insert(events_list, Event:new({timestamp: %f, type: %d, order_position: %d, pattern: %d, row: %d, track: %d, column: %d, note: %d, instrument: %d, volume: %f}))\n" % (event.timestamp, event.type, event.orderPosition, event.pattern, event.row, event.track, event.column, event.note, event.instrument, event.volume)
+		output += "table.insert(events_list, Event:new({timestamp= %f, type= %d, order_position= %d, pattern= %d, row= %d, track= %d, column= %d, note= %d, instrument= %d, volume= %f}))\n" % (event.timestamp, event.type, event.orderPosition, event.pattern, event.row, event.track, event.column, event.note, event.instrument, event.volume)
 
 	f = open(outputFile, 'w')
 	f.write(output)
