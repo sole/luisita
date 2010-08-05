@@ -117,6 +117,8 @@ int luisita_init()
     lua_register(L, "windowTitle", luisita_luaWindowTitle);
     lua_register(L, "setupIsDone", luisita_luaSetupIsDone);
 	lua_register(L, "quit", luisita_luaQuit);
+	lua_register(L, "width", luisita_luaWidth);
+	lua_register(L, "height", luisita_luaHeight);
 
     lua_register(L, "loadShader", luisita_luaLoadShader);
     
@@ -356,6 +358,19 @@ int luisita_luaQuit(lua_State *L)
 	return 0;
 }
 
+// Return current window width in pixels
+int luisita_luaWidth(lua_State *L)
+{
+	lua_pushinteger(L, screen_width);
+	return 1;
+}
+
+// Return current window height in pixels
+int luisita_luaHeight(lua_State *L)
+{
+	lua_pushinteger(L, screen_height);
+	return 1;
+}
 
 // GFX functions
 // ``````````````

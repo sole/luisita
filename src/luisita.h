@@ -37,8 +37,10 @@ static int luisita_luaTrace(lua_State *L);
 static int luisita_luaWindowTitle(lua_State *L);
 static int luisita_luaSetupIsDone(lua_State *L);
 static int luisita_luaQuit(lua_State *L);
+static int luisita_luaWidth(lua_State *L);
+static int luisita_luaHeight(lua_State *L);
 
-// Shader functions (Unfinished)
+// Shader functions (TODO: Unfinished)
 static int luisita_luaLoadShader(lua_State *L);
 
 // 2D primitives
