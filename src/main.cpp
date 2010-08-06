@@ -78,7 +78,7 @@ void parse_arguments(int argc, char*argv[], int *width, int *height, int *fullsc
 
 	while(1)
 	{
-		c = getopt_long (argc, argv, "w:h:o:r:l:s:t", long_options, &option_index);
+		c = getopt_long (argc, argv, "w:h:lt:s:", long_options, &option_index);
 
 		if(c == -1) { break; }
 
@@ -211,6 +211,9 @@ int main(int argc, char *argv[])
 
 	// Notify of window width and height
 	luisita_setWindowDimensions(width, height);
+	
+	// Notify of music start position
+	luisita_setMusicStartPosition(startTime);
 	
     // Main loop
     luisita_run();

@@ -71,6 +71,7 @@ int status_shouldDraw;
 
 // Music/Audio
 std::vector<HSTREAM> musicStreams;
+float music_start_position = 0.0f;
 
 // Screen
 int screen_width = 640, screen_height = 480; // defaults, just in case...
@@ -178,6 +179,7 @@ int luisita_init()
 	lua_register(L, "playMusicStream", luisita_luaPlayMusicStream);
 	lua_register(L, "isMusicStreamFinished", luisita_luaIsMusicStreamFinished);
 	lua_register(L, "getMusicStreamTime", luisita_luaGetMusicStreamTime);
+	lua_register(L, "getMusicStartPosition", luisita_luaGetMusicStartPosition);
 
 	screenBackground[0] = 0.3f;
 	screenBackground[1] = 0.3f;
@@ -196,6 +198,11 @@ int luisita_setWindowDimensions(int width, int height)
 {
 	screen_width = width;
 	screen_height = height;
+}
+
+int luisita_setMusicStartPosition(float seconds)
+{
+	music_start_position = seconds;
 }
 
 int luisita_end()
@@ -669,7 +676,7 @@ int luisita_luaEndShape(lua_State *L)
 
 int luisita_luaVertex(lua_State *L)
 {
-	double x, y, z, u, v;
+	float x, y, z, u, v;
 	
 	x = lua_tonumber(L, 1);
 	y = lua_tonumber(L, 2);
@@ -682,7 +689,7 @@ int luisita_luaVertex(lua_State *L)
 		glTexCoord2f(u, v);
 	}
 	
-	glVertex3d(x, y, z);
+	glVertex3f(x, y, z);
 	
 	return 0;
 }
@@ -1148,5 +1155,11 @@ int luisita_luaGetMusicStreamTime(lua_State *L)
 	// This value is the current position of the stream in SECONDS
 	int channel = musicStreams.at(lua_tointeger(L, 1));
 	lua_pushnumber(L, BASS_ChannelBytes2Seconds(channel, BASS_ChannelGetPosition(channel, BASS_POS_BYTE)) );
+	return 1;
+}
+
+int luisita_luaGetMusicStartPosition(lua_State *L)
+{
+	lua_pushnumber(L, music_start_position);
 	return 1;
 }

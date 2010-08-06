@@ -5,6 +5,7 @@
  
 extern int luisita_init();
 extern int luisita_setWindowDimensions(int width, int height);
+extern int luisita_setMusicStartPosition(float seconds);
 extern int luisita_end();
 extern void luisita_run();
 extern int luisita_loadScript(const char *scriptFile);
@@ -106,6 +107,7 @@ static int luisita_luaLoadMusicStream(lua_State *L);
 static int luisita_luaPlayMusicStream(lua_State *L);
 static int luisita_luaIsMusicStreamFinished(lua_State *L);
 static int luisita_luaGetMusicStreamTime(lua_State *L);
+static int luisita_luaGetMusicStartPosition(lua_State *L);
 
 #endif
 
