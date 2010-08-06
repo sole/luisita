@@ -1120,20 +1120,20 @@ int luisita_luaLoadMusicStream(lua_State *L)
 
 int luisita_luaPlayMusicStream(lua_State *L)
 {
-	float positionMillis = 0;
+	float positionSeconds = 0;
 	int index = lua_tointeger(L, 1);
 
 	if(lua_gettop(L) == 2)
 	{
-		positionMillis = lua_tonumber(L, 2);
+		positionSeconds = lua_tonumber(L, 2);
 	}
 
 	if(index + 1 <= musicStreams.size())
 	{
 		BASS_ChannelPlay(musicStreams.at(index), FALSE);
-		if(positionMillis > 0)
+		if(positionSeconds > 0)
 		{
-			BASS_ChannelSetPosition(musicStreams.at(index), BASS_ChannelSeconds2Bytes(musicStreams.at(index), positionMillis / 1000), BASS_POS_BYTE);
+			BASS_ChannelSetPosition(musicStreams.at(index), BASS_ChannelSeconds2Bytes(musicStreams.at(index), positionSeconds), BASS_POS_BYTE);
 		}
 	}
 	return 0;
