@@ -30,5 +30,5 @@ Even if there aren't many features yet, there are already two demos which use Lu
 
 #### Credits ####
 
-- Code: sole - http://soledadpenades.com
-- Logo: trace - http://trace.xplsv.com
+- Code: [sole](http://soledadpenades.com)
+- Logo: [trace](http://trace.xplsv.com)
