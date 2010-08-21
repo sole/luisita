@@ -24,10 +24,11 @@ Ideally I'd like to get rid of external libraries, specially of sound libraries 
 Even if there aren't many features yet, there are already two demos which use Luisita as its basis:
 
 [![Escena.org invtro v2](http://xplsv.com/files/imgs/50523.png)](http://xplsv.com/prods/demos/xplsv_einv2.zip)
+
 [![restart](http://xplsv.com/files/imgs/55584.jpg)](http://www.scene.org/file.php?file=%2Fparties%2F2010%2Fassembly10%2Fdemo%2Frestart_by_xplsv.zip&fileinfo)
 
 
 #### Credits ####
 
-Code: sole - http://soledadpenades.com
-Logo: trace - http://trace.xplsv.com
+- Code: sole - http://soledadpenades.com
+- Logo: trace - http://trace.xplsv.com
