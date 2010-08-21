@@ -1,7 +1,7 @@
 Luisita
 =======
 
-[![Luisita](http://github.com/sole/luisita/raw/master/assets/luisita_t.png)]
+![Luisita](http://github.com/sole/luisita/raw/master/assets/luisita_t.png)
 
 Luisita is an scriptable graphics environment à la Processing, only it's based on Lua & C++. 
 
