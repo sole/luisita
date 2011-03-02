@@ -783,7 +783,7 @@ void luisita_gfxShowImage(int textureId, float x, float y, float width, float he
 	glScalef(width, height, 1);
 	glTranslatef(x, y, 0);
 	
-	glColor3f(1,1,1);
+	//glColor3f(1,1,1);
 	glBegin (GL_QUADS);
 	glTexCoord2f (0.0, 0.0);
 	glVertex3f (0.0, 0.0, 0.0);
